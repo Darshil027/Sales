@@ -1,0 +1,163 @@
+﻿@page
+@model Team2WebApp.Pages.Shared.Sales.SaleModel
+@{
+    ViewData["Title"] = "Sale page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to eTools Sale</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Shopping</a></li>
+            <li><a href="#">Cart View</a></li>
+            <li><a href="#">Check Out</a></li>
+            <li><a href="#">Return</a></li>
+        </ul>
+    </nav>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form method="post">
+    @Model.Feedback
+    @if (Model.Shopping)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Categories)
+                {
+                    <tr>
+                        <td>
+                            <input type="hidden" name="Categories.Index" value="@item.CategoryID" />
+                            <button type="submit" name="CategoryId" value="@item.CategoryID" asp-page-handler="CategoryItems">
+                                @item.Description
+                            </button>
+                        </td>
+                        <td>
+                            <input type="hidden" name="Categories[@item.CategoryID].CategoryID" value="@item.CategoryID" readonly />
+                            <input type="hidden" name="Categories[@item.CategoryID].Count" value="@item.Count" readonly />
+                            @item.Count
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Description</th>
+                    <th>QuantityOnHand</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.StockItems != null)
+                {
+                    @foreach (var item in Model.StockItems)
+                    {
+                        <tr>
+                            <td>
+                                <input type="hidden" name="StockItems.Index" value="@item.StockItemID" />
+                                <button type="submit" name="StockItemID" value="@item.StockItemID" asp-page-handler="AddItems">
+                                    Add
+                                </button>
+                            </td>
+                            <td>
+                                <span>1</span>
+                            </td>
+                            <td>
+                                <input type="hidden" name="StockItems[@item.StockItemID].StockItemID" value="@item.StockItemID" readonly />
+                                <input type="hidden" name="StockItems[@item.StockItemID].Description" value="@item.Description" readonly />
+                                <input type="hidden" name="StockItems[@item.StockItemID].price" value="@item.price" readonly />
+                                @item.price @item.Description
+                            </td>
+                            <td>
+                                <input type="hidden" name="StockItems[@item.StockItemID].QuantityOnHand" value="@item.QuantityOnHand" readonly />
+                                @item.QuantityOnHand
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <button type="submit" asp-page-handler="Cart">
+            Cart
+        </button>
+    }
+    else if (Model.ViewCart)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.SaleCarts != null)
+                {
+                    @foreach (var item in Model.SaleCarts)
+                    {
+                        <tr>
+                            <td>
+                                <input type="hidden" name="SaleCarts.Index" value="@item.StockItemID" />
+                                <input type="hidden" name="SaleCarts[@item.StockItemID].StockItemID" value="@item.StockItemID" readonly />
+                                <input type="hidden" name="SaleCarts[@item.StockItemID].Description" value="@item.Description" readonly />
+                                @item.Description
+                            </td>
+                            <td>
+                                <input type="hidden" name="SaleCarts[@item.StockItemID].price" value="@item.price" readonly />
+                                @item.price
+                            </td>
+                            <td>
+                                <input type="hidden" name="SaleCarts[@item.StockItemID].Total" value="@item.Total" readonly />
+                                @item.Total
+                            </td>
+                            <td>
+                                <button type="submit" name="StockItemID" value="@item.StockItemID" asp-page-handler="RemoveItem">
+                                    Remove
+                                </button>
+                            </td>
+                            <td>
+                               <input type="text" name="SaleCarts[@item.StockItemID].Quantity" value="@item.Quantity" />
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <button type="submit" asp-page-handler="Shopping">
+            Shopping
+        </button>
+        <button type="submit" asp-page-handler="Checkout">
+            Checkout
+        </button>
+    }
+    else
+    {
+        <button type="submit" asp-page-handler="Cart">
+            Cart
+        </button>
+    }
+
+    @if (Model.SaleCarts != null)
+    {
+        @foreach (var item in Model.SaleCarts)
+        {
+            <input type="hidden" name="SaleCarts.Index" value="@item.StockItemID" />
+            <input type="hidden" name="SaleCarts[@item.StockItemID].StockItemID" value="@item.StockItemID" readonly />
+            <input type="hidden" name="SaleCarts[@item.StockItemID].Description" value="@item.Description" readonly />
+            <input type="hidden" name="SaleCarts[@item.StockItemID].Quantity" value="@item.Quantity" readonly />
+            <input type="hidden" name="SaleCarts[@item.StockItemID].price" value="@item.price" readonly />
+            <input type="hidden" name="SaleCarts[@item.StockItemID].Total" value="@item.Total" readonly />
+        }
+    }
+</form>

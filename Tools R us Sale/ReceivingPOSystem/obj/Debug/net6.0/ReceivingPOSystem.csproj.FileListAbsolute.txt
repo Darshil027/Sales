@@ -1,0 +1,12 @@
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\bin\Debug\net6.0\ReceivingPOSystem.deps.json
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\bin\Debug\net6.0\ReceivingPOSystem.dll
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\bin\Debug\net6.0\ReceivingPOSystem.pdb
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.csproj.AssemblyReference.cache
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.AssemblyInfoInputs.cache
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.AssemblyInfo.cs
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.csproj.CoreCompileInputs.cache
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.dll
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\refint\ReceivingPOSystem.dll
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ReceivingPOSystem.pdb
+C:\Users\darsh\Desktop\DMIT Term 3\2018 App Dev\Assesment 3\2018-sept-2022-a01-project-team2-a01-sep2022\Team2WebSolution\ReceivingPOSystem\obj\Debug\net6.0\ref\ReceivingPOSystem.dll
